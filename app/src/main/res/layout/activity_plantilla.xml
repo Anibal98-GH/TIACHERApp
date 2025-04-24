@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonLogout2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/red"
+        android:fontFamily="@font/jetbrains_mono_medium"
+        android:padding="10dp"
+        android:text="@string/cerrar_sesi_n"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="596dp"
+        android:layout_marginTop="40dp"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="@color/form_bg"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/jetbrains_mono_medium"
+                android:text="@string/t_tulo_del_examen"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewInstrucciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/jetbrains_mono_medium"
+                android:text="@string/saca_una_foto_a_la_n_plantilla_del_examen_nrecuerda_que_tiene_que_ser_n_una_foto_n_tida"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textViewTitulo"
+                app:layout_constraintHorizontal_bias="0.444"
+                app:layout_constraintStart_toStartOf="@+id/textViewTitulo"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonCorregir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:backgroundTint="@color/buttonBlue"
+                android:fontFamily="@font/jetbrains_mono_medium"
+                android:text="@string/corregir_examen"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewCamera"
+                app:layout_constraintStart_toStartOf="@+id/imageViewCamera"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewCamera"
+                app:layout_constraintVertical_bias="0.844" />
+
+            <ImageView
+                android:id="@+id/imageViewCamera"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/camera2"
+                app:layout_constraintTop_toBottomOf="@+id/textViewInstrucciones"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="1:1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/imageButtonBack"
+        android:layout_width="42dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="172dp"
+        android:background="@drawable/back_bg"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonLogout2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonLogout2"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/buttonLogout2"
+        app:layout_constraintVertical_bias="0.625"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

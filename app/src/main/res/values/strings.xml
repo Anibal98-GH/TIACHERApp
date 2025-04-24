@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">TIACHER</string>
+    <string name="iniciar_sesi_n">Iniciar sesión</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="introduce_tu_contrase_a">Introduce tu contraseña.</string>
+    <string name="introduce_tu_email">Introduce tu email.</string>
+    <string name="correo_electr_nico">Correo electrónico</string>
+    <string name="cerrar_sesi_n">Cerrar sesión</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="nota">NOTA:</string>
+    <string name="sin_contestar">Sin contestar:</string>
+    <string name="fallos">Fallos:</string>
+    <string name="correctas">Correctas:</string>
+    <string name="saca_una_foto_a_la_n_plantilla_del_examen_nrecuerda_que_tiene_que_ser_n_una_foto_n_tida">Saca una foto a la\n plantilla del examen.\nRecuerda que tiene que ser\n una foto nítida.</string>
+    <string name="ya_tienes_una_cuenta_ninicia_sesi_n_aqu">¿Ya tienes una cuenta?\nInicia sesión aquí</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="repite_la_contrase_a">Repite la contraseña.</string>
+    <string name="introduce_tu_nombre">Introduce tu nombre.</string>
+    <string name="nombre">Nombre</string>
+    <string name="escanea_el_c_digo_qr">Escanea el código QR</string>
+    <string name="introducir_identificador_manualmente">Introducir identificador manualmente</string>
+    <string name="corregir_examen">Corregir examen</string>
+    <string name="t_tulo_del_examen">Título del examen</string>
+    <string name="correctas_dialog">Correctas: %1$s</string>
+    <string name="fallos_dialog">Fallos: %1$s</string>
+    <string name="sin_contestar_dialog">Sin contestar: %1$s</string>
+    <string name="nota_dialog">Nota: %1$s</string>
+</resources>

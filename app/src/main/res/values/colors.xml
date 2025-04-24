@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="azul_claro_bg">#5499F8</color>
+    <color name="azul_oscuro_bg">#315A92</color>
+    <color name="form_bg">#B6CFF0</color>
+    <color name="GrisApagado">#A9807E7E</color>
+    <color name="buttonBlue">#3E4ED8</color>
+    <color name="red">#EF4444</color>
+</resources>

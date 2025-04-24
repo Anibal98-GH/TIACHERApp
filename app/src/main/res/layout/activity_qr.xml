@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/red"
+        android:fontFamily="@font/jetbrains_mono_medium"
+        android:padding="10dp"
+        android:text="@string/cerrar_sesi_n"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@id/cardView1"
+        app:layout_constraintEnd_toEndOf="@id/cardView1" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="596dp"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="@color/form_bg"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewEscanea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/jetbrains_mono_medium"
+                android:text="@string/escanea_el_c_digo_qr"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textViewQR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:fontFamily="@font/jetbrains_mono_medium"
+                android:text="@string/introducir_identificador_manualmente"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewQR"
+                app:layout_constraintStart_toStartOf="@+id/imageViewQR"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewQR" />
+
+            <EditText
+                android:id="@+id/etQR"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_bg"
+                android:hint="Introduce el identificador"
+                android:textSize="14.5dp"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/GrisApagado"
+                app:layout_constraintEnd_toEndOf="@+id/textViewQR"
+                app:layout_constraintStart_toStartOf="@+id/textViewQR"
+                app:layout_constraintTop_toBottomOf="@+id/textViewQR" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSiguiente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="@color/buttonBlue"
+                android:fontFamily="@font/jetbrains_mono_medium"
+                android:padding="10dp"
+                android:text="Siguiente"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/etQR"
+                app:layout_constraintHorizontal_bias="0.571"
+                app:layout_constraintStart_toStartOf="@+id/etQR"
+                app:layout_constraintTop_toBottomOf="@+id/etQR" />
+
+            <ImageView
+                android:id="@+id/imageViewQR"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="64dp"
+                android:src="@drawable/qrcode"
+                app:layout_constraintEnd_toEndOf="@+id/textViewEscanea"
+                app:layout_constraintStart_toStartOf="@+id/textViewEscanea"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEscanea" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
