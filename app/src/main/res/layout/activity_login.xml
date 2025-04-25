@@ -5,8 +5,10 @@
     android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="369dp"
-        android:layout_height="482dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="80dp"
+        android:layout_marginHorizontal="20dp"
         app:cardBackgroundColor="@color/form_bg"
         app:cardCornerRadius="16dp"
         app:cardElevation="20dp"
@@ -33,7 +35,6 @@
                 android:id="@+id/textViewNueva"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:fontFamily="@font/jetbrains_mono_medium"
                 android:text="@string/correo_electr_nico"
                 android:textAlignment="center"
@@ -47,23 +48,25 @@
 
             <EditText
                 android:id="@+id/etCorreo"
-                android:layout_width="304dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text_bg"
                 android:hint="@string/introduce_tu_email"
                 android:paddingHorizontal="16dp"
                 android:textColor="@color/black"
-                android:background="@drawable/edit_text_bg"
                 android:textColorHint="@color/GrisApagado"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintHorizontal_bias="0.6"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewNueva" />
 
             <EditText
                 android:id="@+id/etPassword"
-                android:layout_width="304dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/edit_text_bg"
                 android:hint="@string/introduce_tu_contrase_a"
@@ -72,8 +75,7 @@
                 android:textColor="@color/black"
                 android:textColorHint="@color/GrisApagado"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.492"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textViewPassword"
                 app:layout_constraintTop_toBottomOf="@+id/textViewPassword" />
 
             <TextView
@@ -95,7 +97,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonLogin"
-                android:layout_width="304dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:layout_marginTop="44dp"
@@ -114,6 +116,7 @@
                 android:id="@+id/textViewToRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingBottom="50dp"
                 android:text="¿Todavía no tienes cuenta?\nRegistrate aquí"
                 android:textAlignment="center"
                 android:textStyle="bold"

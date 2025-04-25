@@ -57,7 +57,6 @@ class ExamActivity : AppCompatActivity() {
         tvTitulo.text = intent.getStringExtra("titulo")
         uuid = intent.getStringExtra("uuid").toString()
 
-
         cameraLauncher =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
                 if (result.resultCode == Activity.RESULT_OK) {
@@ -72,9 +71,7 @@ class ExamActivity : AppCompatActivity() {
                             original.width, original.height,
                             matrix, true
                         )
-
                         buttonCamera.setImageBitmap(rotated)
-
                         imageB64 = bitmapToBase64(rotated)
 
                     } catch (e: Exception) {
@@ -103,7 +100,7 @@ class ExamActivity : AppCompatActivity() {
         }
 
         buttonCorregir.setOnClickListener {
-            if (imageB64.isNullOrEmpty()) {
+            if (!imageB64.isNullOrEmpty()) {
                 DatabaseHelper.sendPictureToServer(this, imageB64!!) { _, correccionResponse ->
                     val dialogCorreccion = Dialog(this)
                     dialogCorreccion.setContentView(R.layout.dialog_results)

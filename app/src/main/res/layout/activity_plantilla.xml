@@ -8,7 +8,6 @@
         android:id="@+id/buttonLogout2"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-
         android:layout_marginBottom="12dp"
         android:backgroundTint="@color/red"
         android:fontFamily="@font/jetbrains_mono_medium"

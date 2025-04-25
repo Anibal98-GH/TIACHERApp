@@ -5,8 +5,9 @@
     android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="366dp"
-        android:layout_height="648dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
         app:cardBackgroundColor="@color/form_bg"
         app:cardCornerRadius="16dp"
         app:cardElevation="20dp"
@@ -22,7 +23,7 @@
             <ImageView
                 android:id="@+id/imageViewLogo"
                 android:layout_width="match_parent"
-                android:layout_height="126dp"
+                android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -36,19 +37,19 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/jetbrains_mono_medium"
                 android:text="@string/correo_electr_nico"
-                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/etNombre"
-                app:layout_constraintHorizontal_bias="0.008"
-                app:layout_constraintStart_toStartOf="@+id/etNombre"
+                app:layout_constraintEnd_toEndOf="@+id/textViewNombre"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewNombre"
                 app:layout_constraintTop_toBottomOf="@+id/etNombre" />
 
             <EditText
                 android:id="@+id/etCorreo"
-                android:layout_width="304dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/edit_text_bg"
                 android:hint="@string/introduce_tu_email"
@@ -73,14 +74,15 @@
                 android:textSize="15sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.099"
+                app:layout_constraintHorizontal_bias="0.062"
                 app:layout_constraintStart_toStartOf="@+id/imageViewLogo"
                 app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
 
             <EditText
                 android:id="@+id/etNombre"
-                android:layout_width="304dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/edit_text_bg"
                 android:hint="@string/introduce_tu_nombre"
@@ -103,16 +105,17 @@
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/etCorreo"
+                app:layout_constraintEnd_toEndOf="@+id/textViewCorreo"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/etCorreo"
+                app:layout_constraintStart_toStartOf="@+id/textViewCorreo"
                 app:layout_constraintTop_toBottomOf="@+id/etCorreo" />
 
             <EditText
                 android:id="@+id/etPasswordReg"
-                android:layout_width="304dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="4dp"
                 android:background="@drawable/edit_text_bg"
                 android:hint="@string/introduce_tu_contrase_a"
                 android:inputType="textPassword"
@@ -135,15 +138,16 @@
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/etPasswordReg"
+                app:layout_constraintEnd_toEndOf="@+id/textViewPasswordReg"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/etPasswordReg"
+                app:layout_constraintStart_toStartOf="@+id/textViewPasswordReg"
                 app:layout_constraintTop_toBottomOf="@+id/etPasswordReg" />
 
             <EditText
                 android:id="@+id/etRePasswordReg"
-                android:layout_width="304dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/edit_text_bg"
                 android:hint="@string/repite_la_contrase_a"
@@ -162,19 +166,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/jetbrains_mono_medium"
+                android:paddingBottom="50dp"
                 android:text="@string/ya_tienes_una_cuenta_ninicia_sesi_n_aqu"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/buttonRegister"
-                app:layout_constraintHorizontal_bias="0.49"
+                app:layout_constraintHorizontal_bias="0.338"
                 app:layout_constraintStart_toStartOf="@+id/buttonRegister"
                 app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonRegister"
-                android:layout_width="304dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="24dp"
                 android:backgroundTint="@color/buttonBlue"
                 android:fontFamily="@font/jetbrains_mono_medium"
