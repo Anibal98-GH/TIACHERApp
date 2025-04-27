@@ -33,7 +33,7 @@ object AuthenticationHelper {
     var loginResponse: LoginResponse? = null
 
     //Hay que cambiar host cuando se hagan las pruebas
-    val HOST = "http://192.168.1.137:5000"
+    val HOST = "https://9aca-2a01-4f8-1c1c-7c0e-00-1.ngrok-free.app"
 
     /**
      * Registro del usuario
@@ -104,43 +104,6 @@ object AuthenticationHelper {
                 }
             }
     }
-
-    /**
-     * Cambio de contraseña
-     */
-    /*fun changePass(context: Context, newPassword: String, callback: (Boolean, String) -> Unit) {
-        refreshToken(context)
-
-        val url = HOST + "/api/user/password"
-        val headers = mapOf(
-            "Authorization" to "Bearer ${loginResponse?.token}"
-        )
-        val json_data = """{
-            "nueva_contrasenia":"$newPassword"
-            }
-        """.trimIndent()
-        url.httpPut()
-            .header(headers)
-            .jsonBody(json_data)
-            .responseString { _, _, result ->
-                when (result) {
-                    is Result.Failure -> {
-                        Log.e(tagRef, "Error de red: ${result.getException().message}")
-                        callback(false, "Error haciendo el cambio de contraseña")
-                    }
-
-                    is Result.Success -> {
-                        val response = result.get()
-                        val gson = Gson()
-                        val cambioResponse =
-                            gson.fromJson(response, RefreshTokenResponse::class.java)
-                        Log.d(tagCambio, cambioResponse.message.toString())
-                        callback(true, cambioResponse.message.toString())
-                    }
-                }
-            }
-
-    }*/
 
     /**
      * Refrescar token si falta x tiempo para que expire

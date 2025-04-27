@@ -25,4 +25,5 @@
     <string name="fallos_dialog">Fallos: %1$s</string>
     <string name="sin_contestar_dialog">Sin contestar: %1$s</string>
     <string name="nota_dialog">Nota: %1$s</string>
+    <string name="haz_click_en_el_icono_del_c_digo_qr_npara_abrir_el_escaner">Haz click en el icono del código qr\npara abrir el escaner.</string>
 </resources>

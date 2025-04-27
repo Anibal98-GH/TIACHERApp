@@ -16,8 +16,7 @@ import org.json.JSONObject
 
 object DatabaseHelper {
 
-    private const val tagDB = "RegisterDebug"
-    val HOST = "http://192.168.1.137:5000"
+    val HOST = "https://9aca-2a01-4f8-1c1c-7c0e-00-1.ngrok-free.app"
     var identificador = ""
 
     fun checkExamExist(
