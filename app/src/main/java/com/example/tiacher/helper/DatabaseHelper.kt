@@ -16,7 +16,7 @@ import org.json.JSONObject
 
 object DatabaseHelper {
 
-    val HOST = "https://9aca-2a01-4f8-1c1c-7c0e-00-1.ngrok-free.app"
+    val HOST = "https://anibal98.com"
     var identificador = ""
 
     fun checkExamExist(
