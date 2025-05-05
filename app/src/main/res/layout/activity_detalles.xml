@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageButton
+        android:id="@+id/imageButtonBackDetalles"
+        android:layout_width="42dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/back_bg"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewResumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+
+        app:cardBackgroundColor="@color/form_bg"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonBackDetalles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonBackDetalles">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="24dp">
+
+            <TextView
+                android:id="@+id/textViewAciertoDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/jetbrains_mono_medium"
+                android:text="Aciertos"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.079"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewPonerAciertoDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/jetbrains_mono_medium"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textViewAciertoDetalles"
+                app:layout_constraintHorizontal_bias="0.512"
+                app:layout_constraintStart_toStartOf="@+id/textViewAciertoDetalles"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAciertoDetalles" />
+
+
+            <TextView
+                android:id="@+id/textViewFalloDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/jetbrains_mono_medium"
+                android:text="Fallos"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewAciertoDetalles"
+                app:layout_constraintStart_toEndOf="@+id/textViewAciertoDetalles"
+                app:layout_constraintTop_toTopOf="@+id/textViewAciertoDetalles"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textViewPonerFalloDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/jetbrains_mono_medium"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/textViewPonerNCDetalles"
+                app:layout_constraintHorizontal_bias="0.526"
+                app:layout_constraintStart_toEndOf="@+id/textViewPonerAciertoDetalles"
+                app:layout_constraintTop_toBottomOf="@+id/textViewFalloDetalles" />
+
+            <TextView
+                android:id="@+id/textViewNCDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/jetbrains_mono_medium"
+                android:text="NC"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewFalloDetalles"
+                app:layout_constraintStart_toEndOf="@+id/textViewFalloDetalles"
+                app:layout_constraintTop_toTopOf="@+id/textViewFalloDetalles"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textViewPonerNCDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/jetbrains_mono_medium"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textViewNCDetalles"
+                app:layout_constraintStart_toStartOf="@+id/textViewNCDetalles"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNCDetalles" />
+
+            <TextView
+                android:id="@+id/textViewNotaDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/jetbrains_mono_medium"
+                android:text="Nota"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewNCDetalles"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewPonerNotaDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/jetbrains_mono_medium"
+                android:text="0.0"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textViewNotaDetalles"
+                app:layout_constraintHorizontal_bias="0.285"
+                app:layout_constraintStart_toStartOf="@+id/textViewNotaDetalles"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNotaDetalles" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="596dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/form_bg"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardViewResumen"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonBackDetalles"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewResumen">
+
+        <ScrollView
+            android:id="@+id/myScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/jetbrains_mono_medium"
+                        android:gravity="center"
+                        android:text="N° Pregunta"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/jetbrains_mono_medium"
+                        android:gravity="center"
+                        android:text="Correcta"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/jetbrains_mono_medium"
+                        android:gravity="center"
+                        android:text="Contestada"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/jetbrains_mono_medium"
+                        android:gravity="center"
+                        android:text="Resultado"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

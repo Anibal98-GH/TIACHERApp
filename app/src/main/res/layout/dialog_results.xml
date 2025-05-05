@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="16dp"
     app:cardElevation="20dp"
     app:strokeColor="@android:color/black"
     app:strokeWidth="2dp"
-    android:layout_marginBottom="32dp"
-    >
+    android:layout_marginBottom="32dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="24dp"
-        >
+        android:padding="24dp">
 
 
         <TextView
@@ -82,19 +79,33 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonAceptar"
-            android:layout_width="355dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="@color/buttonBlue"
             android:padding="10dp"
             android:text="@string/aceptar"
             android:textColor="@color/white"
             app:cornerRadius="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/TextViewNota"
-            app:layout_constraintHorizontal_bias="0.329"
-            app:layout_constraintStart_toStartOf="@+id/TextViewNota"
-            app:layout_constraintTop_toBottomOf="@+id/TextViewNota" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TextViewNota"
+            app:layout_constraintWidth_percent="0.45" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonVerDetalles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/buttonBlue"
+            android:padding="10dp"
+            android:text="Ver detalles"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TextViewNota"
+            app:layout_constraintWidth_percent="0.45" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

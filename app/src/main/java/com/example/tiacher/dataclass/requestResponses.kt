@@ -43,9 +43,18 @@ data class ExamExistResponse(
 ) : Parcelable
 
 @Parcelize
+data class PreguntaDetalle(
+    val question: String,
+    val correct: String?,
+    val answered: String?,
+    val result: String?
+) : Parcelable
+
+@Parcelize
 data class CorreccionResponse(
     val valid: Int,
     val fail: Int,
     val nc: Int,
-    val grade: Int
+    val grade: Double,
+    val data: List<PreguntaDetalle>
 ) : Parcelable

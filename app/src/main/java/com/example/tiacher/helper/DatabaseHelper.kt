@@ -50,6 +50,7 @@ object DatabaseHelper {
     fun sendPictureToServer(
         context: Context,
         base64Image: String,
+        id_examen: String,
         callback: (Boolean, CorreccionResponse) -> Unit
     ) {
         refreshToken(context)
@@ -58,6 +59,7 @@ object DatabaseHelper {
             "Authorization" to "Bearer ${loginResponse?.token}"
         )
         val json = JSONObject().apply {
+            put("examen", id_examen)
             put("image", base64Image)
         }
         val json_data = json.toString()
@@ -90,7 +92,13 @@ object DatabaseHelper {
                             Log.e("Correccion", "Error parsing response: ${e.message}")
                             callback(
                                 false,
-                                CorreccionResponse(valid = 0, fail = 0, nc = 0, grade = 0)
+                                CorreccionResponse(
+                                    valid = 0,
+                                    fail = 0,
+                                    nc = 0,
+                                    grade = 0.0,
+                                    data = emptyList()
+                                )
                             ) // Send empty response or create an error response
                         }
                     }

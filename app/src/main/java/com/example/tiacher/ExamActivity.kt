@@ -101,13 +101,18 @@ class ExamActivity : AppCompatActivity() {
 
         buttonCorregir.setOnClickListener {
             if (!imageB64.isNullOrEmpty()) {
-                DatabaseHelper.sendPictureToServer(this, imageB64!!) { _, correccionResponse ->
+                DatabaseHelper.sendPictureToServer(
+                    this,
+                    imageB64!!,
+                    uuid
+                ) { _, correccionResponse ->
                     val dialogCorreccion = Dialog(this)
                     dialogCorreccion.setContentView(R.layout.dialog_results)
                     dialogCorreccion.window?.setLayout(
-                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        ViewGroup.LayoutParams.MATCH_PARENT,
                         ViewGroup.LayoutParams.WRAP_CONTENT
                     )
+                    dialogCorreccion.window?.setBackgroundDrawableResource(android.R.color.transparent)
                     dialogCorreccion.setCancelable(false)
                     dialogCorreccion.show()
 
@@ -118,7 +123,8 @@ class ExamActivity : AppCompatActivity() {
                     val gradeTV = dialogCorreccion.findViewById<TextView>(R.id.TextViewNota)
                     val buttonCloseDialog =
                         dialogCorreccion.findViewById<Button>(R.id.buttonAceptar)
-
+                    val buttonSeeDetails =
+                        dialogCorreccion.findViewById<Button>(R.id.buttonVerDetalles)
                     validAnswer.text =
                         getString(R.string.correctas_dialog, correccionResponse.valid.toString())
                     failedAnswer.text =
@@ -130,6 +136,13 @@ class ExamActivity : AppCompatActivity() {
 
                     buttonCloseDialog.setOnClickListener {
                         dialogCorreccion.dismiss()
+                    }
+
+                    buttonSeeDetails.setOnClickListener {
+                        val intent = Intent(this, DetailsActivity::class.java)
+                        intent.putExtra("correccion", correccionResponse)
+                        Log.d("Intent", correccionResponse.toString())
+                        startActivity(intent)
                     }
                 }
             } else {
