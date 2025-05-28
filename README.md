@@ -3,6 +3,7 @@
 **TIACHER** es una aplicación educativa desarrollada en Android que permite corregir automáticamente exámenes tipo test. El proceso consiste en escanear un **código QR** generado desde una plataforma web y, posteriormente, capturar una imagen de la hoja de respuestas para realizar la corrección.
 
 > 🔗 [Repositorio de la plataforma web (generación de exámenes)](https://github.com/Runaway22/TIACHERWebV0)
+> 🔗 [Repositorio del servidor](https://github.com/Runaway22/TIACHERServer)
 
 ---
 
